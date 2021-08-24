@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Javascript onchange event</title>
+</head>
+<body>
+	<h1>Javascript onchange event</h1>
+	<h1>သင့်မြို့ကိုရွှေးချယ်ပါ</h1>
+	<p>Select a new car from list.</p>
+	<select  id="mySelect" onchange="myFunction()">
+		<option value="yangon">Yangon</option>
+		<option value="mandalay">Mandalay</option>
+		<option value="maymyo">MayMyo</option>
+		<option value="naypitaw">Naypitaw</option>
+		<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius, odit quidem ea vero dolores harum doloremque et molestiae hic facere ratione, animi temporibus, illo sunt architecto aliquam rem incidunt officiis.</p>
+	</select>
+
+	<p id="demo"></p>
+
+
+	<script>
+		function myFunction() {
+			var x =document.getElementById("mySelect").value;
+			document.getElementById('demo').innerHTML = "သင်ရွှေးချယ်ထားသောမြို့သည် :"+ x;
+			document.getElementById("You selected is: " + x);
+
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<p>Lorem ipsum, dolor sit amet consectetur adipisicing.</p>
+	<div id="myDIV"></div>
+
+	<p><strong>Note:</strong>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore deserunt eligendi, adipisci.</p>
+
+	<script>
+		if (typeof(EventSource) !== "undefined") {
+			var source = new EventSource ("/html/demo_sse.php");
+			source.onmessage = function(event) {
+				document.getElementById("myDIV").innerHTML = event.origin;
+			};
+		} else {
+			document.getElementById("myDIV").innerHTML = "Sorry, your browser does not support server-sent events...";
+		}
+	</script>
+</body>
+</html>

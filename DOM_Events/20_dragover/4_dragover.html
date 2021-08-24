@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+#droptarget {
+  float: left; 
+  width: 200px; 
+  height: 45px;
+  margin: 55px;
+  margin-top: 155px;
+  padding: 10px;
+  border: 1px solid #aaaaaa;
+}
+</style>
+</head>
+<body>
+	<p>Lorem, ipsum dolor sit amet, consectetur adipisicing elit. Error dignissimos, ex facere expedita fugit a obcaecati magni repudiandae quam consequuntur, quae eum maiores reprehenderit mollitia quidem blanditiis, necessitatibus autem quibusdam?</p>
+
+	<p draggable="true" id="dragtarget">Drag me into the rectangle!</p>
+
+	<div id="droptarget"></div>
+
+	<p style="clear:both;"><strong>Note:</strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, doloribus itaque obcaecati excepturi. Vero, facere!</p>
+
+	<p id="demo"></p>
+
+	<script>
+		var data = document.getElementById("dragtarget");
+		var data = document.getElementById("droptarget");
+
+		/* Events fired on the drag target */
+
+		drag.addEventListener("dragstart", function(event) {
+
+		  event.dataTransfer.setData("Text", event.target.id);
+});
+
+drag.addEventListener("drag", function(event) {
+  document.getElementById("demo").innerHTML = "The p element is being dragged.";
+});
+
+
+/* Events fired on the drop target */
+drop.addEventListener("dragover", function(event) {
+  event.preventDefault();
+  document.getElementById("demo").innerHTML = "The p element is OVER the droptarget.";
+  event.target.style.border = "4px dotted purple";
+});
+
+drop.addEventListener("drop", function(event) {
+  event.preventDefault();
+  var data = event.dataTransfer.getData("Text");
+  event.target.appendChild(document.getElementById(data));
+  document.getElementById("demo").innerHTML = "The p element was dropped.";
+});
+</script>
+
+	
+</body>
+</html>

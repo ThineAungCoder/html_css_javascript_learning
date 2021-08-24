@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body onpageshow="myFunction(event)">
+	
+	 <h1>Hello World!</h1>
+
+	 <p><strong>Note:</strong>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat vitae totam esse!</p>
+
+	 <script>
+	 	function myFunction(event) {
+	 		if (event.persisted) {
+	 			alert ("The page was cached by the browser");
+	 		} eles {
+	 			alert ("The page was NOT cached by the browser");
+	 		}
+	 	}
+	 </script>
+</body>
+</html>

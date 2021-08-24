@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+.droptarget {
+  float: left; 
+  width: 100px; 
+  height: 35px;
+  margin: 15px;
+  padding: 10px;
+  border: 1px solid #aaaaaa;
+}
+</style>
+</head>
+<body>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque nisi pariatur deserunt vel, natus perspiciatis veniam commodi fugit. Magni cum quod, atque nesciunt ullam quas. Fuga facilis tenetur quos, cupiditate?</p>
+
+  <p>Drag the p element back and forth between the two rectangles:</p>
+
+  <div class="droptarget" ondrop="drop(event)"ondragover="allowDrop(event)">
+    <p ondragstart="dragStart(event)" draggable="true" id="dragtarget">Drag me!</p>
+  </div>
+
+  <div class="droptarget" ondrop="drop(event)" ondragover="allowDrop(event)">
+  </div>
+
+  <p style="clear:bot;"><strong>Note:</strong>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid sunt nemo provident suscipit delectus beatae libero maiores necessitatibus vero reprehenderit perferendis quasi quibusdam sed, optio dolor. Et, iste praesentium similique!</p>
+
+  <p id="demo"></p>
+
+  <script>
+    /* Events fired on the drop target */
+    function dragStart(event) {
+      event.dataTransfer.setData("Text", event.target.id);
+      document.getElementById("demo").innerHTML = "Started to drag the p element";
+    }
+
+    /* Events fired on the drop target */
+    function allowDrop(event) {
+      event.preventDefault();
+      var data = event.dataTransfer.getData("Text");
+  event.target.appendChild(document.getElementById(data));
+  document.getElementById("demo").innerHTML = "The p element was dropped";
+}
+    
+  </script>
+</body>
+</html>

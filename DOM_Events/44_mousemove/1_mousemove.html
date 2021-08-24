@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		div {
+			width: 200px;
+			height: 100px;
+			border: 1px solid black;
+		}
+	</style>
+</head>
+<body>
+	<div onmousemove="myFunction(event)" onmouseout="clearCoor()"></div>
+
+	<p>Lorem, ipsum dolor sit amet consectetur adipisicing, elit. Id repellendus, ipsa. Nulla!</p>
+
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing, elit. Cum neque quas ducimus veniam asperiores autem vero in dolore dolorem. Repellendus accusamus illum tempora dolor unde, eaque necessitatibus quis excepturi, soluta.</p>
+
+	<p id="demo"></p>
+
+	<script>
+		function myFunction(e) {
+			var x = e.clientX;
+			var y = e.clientY;
+			var coor = "Coordinates: (" + x + "," + y + ")";
+		}
+
+		function clearCoor() {
+			document.getElementById("demo").innerHTML = "";
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad numquam inventore nesciunt!</p>
+
+	<p><strong>Note:</strong>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem voluptatem aspernatur, suscipit?</p>
+
+	<h1 id="demo"></h1>
+
+	<script>
+		document.getElementById("BODY")[0].onpageshow = function() {myFunction()};
+
+		function myFunction() {
+			document.getElementById("demo").innerHTML = "Welcome To My Homepage!";
+		}
+
+		/* This is equivalentt to assignig the event to the window object:
+		widow.onpageshow = function() {
+			document.getElementById("demo").innerHTML = "Welcome to My Homepage!";
+	
+		};
+		*/
+	</script>
+</body>
+</html>

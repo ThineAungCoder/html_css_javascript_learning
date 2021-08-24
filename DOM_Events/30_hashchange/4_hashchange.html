@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur qui, expedita fuga.</p>
+
+	<p>Lorem ipsum dolor sit, amet consectetur, adipisicing elit. Quo, odit. Ex, illo.</p>
+
+	<button onclick="changePart()">Try </button>
+
+	<p id="demo"></p>
+
+	<script>
+		// Using the location.hash property to change the anchor part
+		function changePart() {
+			location.hash = "part5";
+			var x = location.hash;
+			document.getElementById("demo").innerHTML = "The anchor part is now" + x;
+		}
+
+		window.addEventListener("hashchange", myFunction);
+
+		function myFunction() {
+			alert("The anchor part has changed!");
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<p>Lorem, ipsum dolor sit amet consectetur adipisicing, elit. Perspiciatis inventore magni, laborum.</p>
+
+	<iframe id="myframe" src="/default.asp" ></iframe>
+
+	<p id="demo"></p>
+
+	<script>
+		document.getElementById("myFrame").onloab = function() {myFunction()};
+
+		function myFunction() {
+			document.getElementById("demo").innerHTML = "Iframe is loaded.";		}
+	</script>
+</body>
+</html>

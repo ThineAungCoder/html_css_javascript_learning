@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>This example uses the addEventListener() method to attach a "mouseenter" and "mouseleave" event to a h1 element.</p>
+
+<h1 id="demo">Mouse over me</h1>
+
+<script>
+document.getElementById("demo").addEventListener("mouseenter", mouseEnter);
+document.getElementById("demo").addEventListener("mouseleave", mouseLeave);
+
+function mouseEnter() {
+  document.getElementById("demo").style.color = "red";
+}
+
+function mouseLeave() {
+  document.getElementById("demo").style.color = "black";
+}
+</script>
+
+</body>
+</html>
+

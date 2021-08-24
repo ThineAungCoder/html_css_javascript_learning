@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>This example uses the HTML DOM to assign an "onerror" event to an img element.</p>
+
+<img id="myImg" src="images/3.jpg">
+
+<p id="demo"></p>
+
+<script>
+document.getElementById("myImg").onerror = function() {myFunction()};
+
+function myFunction() {
+  document.getElementById("demo").innerHTML = "The image could not be loaded.";
+}
+</script>
+
+</body>
+</html>
